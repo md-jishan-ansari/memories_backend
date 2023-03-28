@@ -10,7 +10,7 @@ const __dirname = path.resolve();
 import postRouter from "./routes/postsRoute.js";
 import userRouter from "./routes/userRoute.js";
 
-import { globalErrorHandler } from "controllers/errorController";
+import { globalErrorHandler } from "./controllers/errorController";
 
 process.on("uncaughtException", (error) => {
   console.log("UNCAUGHT EXCEPTIONS 🌟 shutting down");
