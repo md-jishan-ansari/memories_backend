@@ -1,13 +1,13 @@
 import fs from "fs";
 import mongoose from "mongoose";
-import cloudinary from "../utils/cloudinary";
+import cloudinary from "../utils/cloudinary.js";
 import path from "path";
 
-import User from "../models/user";
+import User from "../models/user.js";
 import PostMessage from "../models/post.js";
 
-import { catchAsync } from "../utils/catchAsync";
-import AppError from "../utils/appError";
+import { catchAsync } from "../utils/catchAsync.js";
+import AppError from "../utils/appError.js";
 
 export const getPost = catchAsync(async (req, res, next) => {
   const id = req.params.id;
