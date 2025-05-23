@@ -28,10 +28,7 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-const DB = process.env.DATABASE.replace(
-  "<PASSWORD>",
-  process.env.DATABASE_PASSWORD
-);
+const DB = process.env.DATABASE;
 
 mongoose
   .connect(DB, {
